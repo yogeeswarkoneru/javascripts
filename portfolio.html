@@ -1,0 +1,656 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Creative Developer Portfolio</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Plus Jakarta Sans", "sans-serif"],
+              heading: ["Space Grotesk", "sans-serif"],
+            },
+            colors: {
+              brand: {
+                black: "#0B0F17",
+                card: "#131A26",
+                accent: "#10B981" /* Neon Emerald */,
+                accentGlow: "rgba(16, 185, 129, 0.15)",
+              },
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body
+    class="bg-brand-black text-gray-300 font-sans antialiased selection:bg-brand-accent selection:text-brand-black"
+  >
+    <!-- Header Navigation -->
+    <header
+      class="fixed top-0 left-0 w-full z-50 bg-brand-black/80 backdrop-blur-md border-b border-gray-800/60"
+    >
+      <nav
+        class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between"
+      >
+        <a
+          href="#"
+          class="font-heading font-bold text-xl text-white tracking-tight group"
+        >
+          DEV<span class="text-brand-accent group-hover:animate-pulse">_</span
+          >PORTFOLIO
+        </a>
+
+        <div
+          class="hidden md:flex items-center gap-8 font-medium text-sm text-gray-400"
+        >
+          <a href="#about" class="hover:text-brand-accent transition-colors"
+            >/about</a
+          >
+          <a href="#projects" class="hover:text-brand-accent transition-colors"
+            >/projects</a
+          >
+          <a
+            href="#experience"
+            class="hover:text-brand-accent transition-colors"
+            >/experience</a
+          >
+          <a
+            href="#contact"
+            class="px-4 py-2 border border-brand-accent/30 rounded-lg text-brand-accent hover:bg-brand-accent/10 transition-all"
+            >Say Hello</a
+          >
+        </div>
+      </nav>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-6 pt-32 space-y-32">
+      <!-- Hero Section -->
+      <section class="grid md:grid-cols-12 gap-12 items-center min-h-[70vh]">
+        <div class="md:col-span-7 space-y-6">
+          <div
+            class="inline-flex items-center gap-2 px-3 py-1 bg-brand-accent/10 border border-brand-accent/20 rounded-full text-xs text-brand-accent font-semibold tracking-wider uppercase"
+          >
+            <span
+              class="w-2 h-2 rounded-full bg-brand-accent animate-ping"
+            ></span>
+            Available for freelance
+          </div>
+          <h1
+            class="text-4xl md:text-6xl font-heading font-bold text-white leading-tight"
+          >
+            Engineering digital
+            <span
+              class="text-transparent bg-clip-text bg-gradient-to-r from-brand-accent to-teal-400"
+              >experiences</span
+            >
+            that scale.
+          </h1>
+          <p class="text-gray-400 text-lg max-w-lg">
+            I'm a full-stack developer dedicated to building polished, highly
+            interactive, and functionally robust user interfaces.
+          </p>
+          <div class="flex items-center gap-4 pt-4">
+            <a
+              href="#projects"
+              class="bg-brand-accent hover:bg-emerald-600 text-brand-black font-semibold px-6 py-3 rounded-xl shadow-lg shadow-brand-accent/20 transition-all duration-300"
+            >
+              View Projects <i class="fa-solid fa-arrow-right ml-2 text-sm"></i>
+            </a>
+            <a
+              href="#contact"
+              class="text-gray-300 hover:text-white px-6 py-3 font-medium transition-colors"
+            >
+              Get in Touch
+            </a>
+          </div>
+        </div>
+
+        <!-- INTERACTIVE HERO ELEMENT: Terminal Emulator -->
+        <div class="md:col-span-5 w-full">
+          <div
+            class="bg-brand-card border border-gray-800 rounded-xl shadow-2xl overflow-hidden font-mono text-sm shadow-black/40"
+          >
+            <div
+              class="bg-gray-900/60 px-4 py-3 border-b border-gray-800 flex items-center justify-between"
+            >
+              <div class="flex items-center gap-2">
+                <span
+                  class="w-3 h-3 rounded-full bg-red-500/80 inline-block"
+                ></span>
+                <span
+                  class="w-3 h-3 rounded-full bg-yellow-500/80 inline-block"
+                ></span>
+                <span
+                  class="w-3 h-3 rounded-full bg-emerald-500/80 inline-block"
+                ></span>
+              </div>
+              <span class="text-xs text-gray-500">developer.js</span>
+            </div>
+            <div class="p-5 space-y-4 min-h-[240px]">
+              <div>
+                <span class="text-purple-400">const</span> developer = {
+                <div class="pl-4">
+                  name:
+                  <span class="text-emerald-400">'Alex Carter'</span>,<br />
+                  role:
+                  <span class="text-emerald-400">'Full Stack Dev'</span>,<br />
+                  techStack: [<span class="text-amber-400"
+                    >'React', 'Next.js', 'Node'</span
+                  >]
+                </div>
+                };
+              </div>
+              <div class="border-t border-gray-800/60 pt-3">
+                <p class="text-gray-500">
+                  // Interactive lookup: click buttons to query state
+                </p>
+                <div class="flex flex-wrap gap-2 mt-2">
+                  <button
+                    onclick="runTerminalCmd('skills')"
+                    class="bg-gray-800 hover:bg-gray-700 text-xs px-2.5 py-1 rounded text-gray-300 transition-colors"
+                  >
+                    .getSkills()
+                  </button>
+                  <button
+                    onclick="runTerminalCmd('coffee')"
+                    class="bg-gray-800 hover:bg-gray-700 text-xs px-2.5 py-1 rounded text-gray-300 transition-colors"
+                  >
+                    .drinkCoffee()
+                  </button>
+                  <button
+                    onclick="runTerminalCmd('clear')"
+                    class="bg-red-950/40 text-red-400 text-xs px-2.5 py-1 rounded border border-red-900/30 transition-colors"
+                  >
+                    Clear
+                  </button>
+                </div>
+              </div>
+              <div
+                id="terminal-output"
+                class="text-xs text-brand-accent mt-2 bg-black/40 p-2 rounded hidden border border-gray-800"
+              >
+                <!-- JS Injectable content -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About / Skills Section -->
+      <section id="about" class="space-y-12">
+        <div class="border-l-2 border-brand-accent pl-4">
+          <h2 class="text-3xl font-heading font-bold text-white">
+            / About & Arsenal
+          </h2>
+          <p class="text-gray-500 text-sm mt-1">Core technical ecosystem</p>
+        </div>
+
+        <div class="grid md:grid-cols-4 gap-6">
+          <!-- Skill Card 1 -->
+          <div
+            class="bg-brand-card p-6 rounded-xl border border-gray-800 hover:border-brand-accent/40 group transition-all duration-300"
+          >
+            <div
+              class="w-12 h-12 bg-gray-800/50 rounded-lg flex items-center justify-center text-xl text-brand-accent group-hover:scale-110 transition-transform mb-4"
+            >
+              <i class="fa-brands fa-react"></i>
+            </div>
+            <h3 class="font-heading text-lg font-bold text-white mb-1">
+              Frontend
+            </h3>
+            <p class="text-sm text-gray-400">
+              React, Next.js, Tailwind CSS, TypeScript, Framer Motion.
+            </p>
+          </div>
+          <!-- Skill Card 2 -->
+          <div
+            class="bg-brand-card p-6 rounded-xl border border-gray-800 hover:border-brand-accent/40 group transition-all duration-300"
+          >
+            <div
+              class="w-12 h-12 bg-gray-800/50 rounded-lg flex items-center justify-center text-xl text-brand-accent group-hover:scale-110 transition-transform mb-4"
+            >
+              <i class="fa-solid fa-server"></i>
+            </div>
+            <h3 class="font-heading text-lg font-bold text-white mb-1">
+              Backend
+            </h3>
+            <p class="text-sm text-gray-400">
+              Node.js, Express, GraphQL, PostgreSQL, MongoDB.
+            </p>
+          </div>
+          <!-- Skill Card 3 -->
+          <div
+            class="bg-brand-card p-6 rounded-xl border border-gray-800 hover:border-brand-accent/40 group transition-all duration-300"
+          >
+            <div
+              class="w-12 h-12 bg-gray-800/50 rounded-lg flex items-center justify-center text-xl text-brand-accent group-hover:scale-110 transition-transform mb-4"
+            >
+              <i class="fa-solid fa-cloud"></i>
+            </div>
+            <h3 class="font-heading text-lg font-bold text-white mb-1">
+              DevOps
+            </h3>
+            <p class="text-sm text-gray-400">
+              Docker, AWS S3/EC2, Vercel, GitHub Actions CI/CD.
+            </p>
+          </div>
+          <!-- Skill Card 4 -->
+          <div
+            class="bg-brand-card p-6 rounded-xl border border-gray-800 hover:border-brand-accent/40 group transition-all duration-300"
+          >
+            <div
+              class="w-12 h-12 bg-gray-800/50 rounded-lg flex items-center justify-center text-xl text-brand-accent group-hover:scale-110 transition-transform mb-4"
+            >
+              <i class="fa-solid fa-wand-magic-sparkles"></i>
+            </div>
+            <h3 class="font-heading text-lg font-bold text-white mb-1">
+              UI UX
+            </h3>
+            <p class="text-sm text-gray-400">
+              Figma prototyping, interactive wireframing, layout systemics.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- INTERACTIVE PROJECTS SECTION: dynamic categories -->
+      <section id="projects" class="space-y-8">
+        <div
+          class="flex flex-col md:flex-row md:items-end justify-between gap-4"
+        >
+          <div class="border-l-2 border-brand-accent pl-4">
+            <h2 class="text-3xl font-heading font-bold text-white">
+              / Selected Works
+            </h2>
+            <p class="text-gray-500 text-sm mt-1">
+              Real world product case studies
+            </p>
+          </div>
+
+          <!-- Interactive Filter Controls -->
+          <div
+            class="flex bg-brand-card border border-gray-800 p-1.5 rounded-xl gap-1 text-xs font-semibold"
+          >
+            <button
+              onclick="filterProjects('all')"
+              id="btn-all"
+              class="filter-btn px-4 py-2 rounded-lg bg-brand-accent text-brand-black transition-all"
+            >
+              All
+            </button>
+            <button
+              onclick="filterProjects('apps')"
+              id="btn-apps"
+              class="filter-btn px-4 py-2 rounded-lg text-gray-400 hover:text-white transition-all"
+            >
+              Webapps
+            </button>
+            <button
+              onclick="filterProjects('design')"
+              id="btn-design"
+              class="filter-btn px-4 py-2 rounded-lg text-gray-400 hover:text-white transition-all"
+            >
+              Designs
+            </button>
+          </div>
+        </div>
+
+        <!-- Project Grid -->
+        <div id="project-grid" class="grid md:grid-cols-2 gap-8">
+          <!-- Project 1 -->
+          <div
+            class="project-item bg-brand-card rounded-xl border border-gray-800 overflow-hidden group transition-all duration-300"
+            data-category="apps"
+          >
+            <div
+              class="h-48 bg-gradient-to-tr from-emerald-950 to-gray-900 relative overflow-hidden flex items-center justify-center p-6 border-b border-gray-800/80"
+            >
+              <i
+                class="fa-solid fa-chart-line text-6xl text-brand-accent/20 group-hover:scale-125 transition-transform duration-500"
+              ></i>
+            </div>
+            <div class="p-6 space-y-4">
+              <div class="flex gap-2">
+                <span
+                  class="text-[10px] uppercase tracking-wider font-bold bg-brand-accent/10 text-brand-accent px-2 py-0.5 rounded"
+                  >Next.js</span
+                >
+                <span
+                  class="text-[10px] uppercase tracking-wider font-bold bg-gray-800 text-gray-400 px-2 py-0.5 rounded"
+                  >Fintech</span
+                >
+              </div>
+              <h3
+                class="text-xl font-heading font-bold text-white group-hover:text-brand-accent transition-colors"
+              >
+                Quantum Crypto Analytics Platform
+              </h3>
+              <p class="text-sm text-gray-400">
+                A decentralized analytics ecosystem processing millions of
+                micro-transactions per minute to supply layout rendering
+                metrics.
+              </p>
+              <div class="flex items-center gap-4 text-sm font-medium pt-2">
+                <a href="#" class="text-white hover:underline"
+                  ><i class="fa-brands fa-github mr-1.5"></i> Repository</a
+                >
+                <a href="#" class="text-brand-accent hover:underline"
+                  ><i class="fa-solid fa-arrow-up-right-from-square mr-1.5"></i>
+                  Live Preview</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div
+            class="project-item bg-brand-card rounded-xl border border-gray-800 overflow-hidden group transition-all duration-300"
+            data-category="apps"
+          >
+            <div
+              class="h-48 bg-gradient-to-tr from-teal-950 to-gray-900 relative overflow-hidden flex items-center justify-center p-6 border-b border-gray-800/80"
+            >
+              <i
+                class="fa-solid fa-layer-group text-6xl text-teal-400/20 group-hover:scale-125 transition-transform duration-500"
+              ></i>
+            </div>
+            <div class="p-6 space-y-4">
+              <div class="flex gap-2">
+                <span
+                  class="text-[10px] uppercase tracking-wider font-bold bg-brand-accent/10 text-brand-accent px-2 py-0.5 rounded"
+                  >NodeJS</span
+                >
+                <span
+                  class="text-[10px] uppercase tracking-wider font-bold bg-gray-800 text-gray-400 px-2 py-0.5 rounded"
+                  >SaaS</span
+                >
+              </div>
+              <h3
+                class="text-xl font-heading font-bold text-white group-hover:text-brand-accent transition-colors"
+              >
+                SaaS Automation Infrastructure
+              </h3>
+              <p class="text-sm text-gray-400">
+                Enterprise task pipeline infrastructure configured to sync
+                database triggers safely across third party webhooks instantly.
+              </p>
+              <div class="flex items-center gap-4 text-sm font-medium pt-2">
+                <a href="#" class="text-white hover:underline"
+                  ><i class="fa-brands fa-github mr-1.5"></i> Repository</a
+                >
+                <a href="#" class="text-brand-accent hover:underline"
+                  ><i class="fa-solid fa-arrow-up-right-from-square mr-1.5"></i>
+                  Live Preview</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div
+            class="project-item bg-brand-card rounded-xl border border-gray-800 overflow-hidden group transition-all duration-300"
+            data-category="design"
+          >
+            <div
+              class="h-48 bg-gradient-to-tr from-purple-950 to-gray-900 relative overflow-hidden flex items-center justify-center p-6 border-b border-gray-800/80"
+            >
+              <i
+                class="fa-solid fa-bezier-curve text-6xl text-purple-400/20 group-hover:scale-125 transition-transform duration-500"
+              ></i>
+            </div>
+            <div class="p-6 space-y-4">
+              <div class="flex gap-2">
+                <span
+                  class="text-[10px] uppercase tracking-wider font-bold bg-brand-accent/10 text-brand-accent px-2 py-0.5 rounded"
+                  >Figma</span
+                >
+                <span
+                  class="text-[10px] uppercase tracking-wider font-bold bg-gray-800 text-gray-400 px-2 py-0.5 rounded"
+                  >Design System</span
+                >
+              </div>
+              <h3
+                class="text-xl font-heading font-bold text-white group-hover:text-brand-accent transition-colors"
+              >
+                Neomorphic UI Component Library
+              </h3>
+              <p class="text-sm text-gray-400">
+                Design guidelines and production mockups for next generation
+                dashboards centering focus on user tactile access parameters.
+              </p>
+              <div class="flex items-center gap-4 text-sm font-medium pt-2">
+                <a href="#" class="text-brand-accent hover:underline"
+                  ><i class="fa-solid fa-arrow-up-right-from-square mr-1.5"></i>
+                  Case Study</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Experience Timeline Section -->
+      <section id="experience" class="space-y-12">
+        <div class="border-l-2 border-brand-accent pl-4">
+          <h2 class="text-3xl font-heading font-bold text-white">
+            / Career Nodes
+          </h2>
+          <p class="text-gray-500 text-sm mt-1">
+            Previous architectural environments
+          </p>
+        </div>
+
+        <div class="relative border-l border-gray-800 pl-6 ml-2 space-y-10">
+          <!-- Node 1 -->
+          <div class="relative">
+            <div
+              class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full border-2 border-brand-accent bg-brand-black"
+            ></div>
+            <span class="text-xs text-brand-accent font-mono"
+              >2024 — Present</span
+            >
+            <h3 class="text-lg font-bold text-white mt-1">
+              Senior Software Engineer
+              <span class="text-gray-500 font-normal">@ Cyberdyne Ltd</span>
+            </h3>
+            <p class="text-sm text-gray-400 mt-2 max-w-2xl">
+              Refactoring primary cloud service layers resulting in a
+              performance acceleration framework downscaling system lag spikes
+              across operations globally.
+            </p>
+          </div>
+
+          <!-- Node 2 -->
+          <div class="relative">
+            <div
+              class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full border-2 border-gray-700 bg-brand-black group-hover:border-brand-accent transition-colors"
+            ></div>
+            <span class="text-xs text-gray-500 font-mono">2022 — 2024</span>
+            <h3 class="text-lg font-bold text-white mt-1">
+              Frontend Developer
+              <span class="text-gray-500 font-normal">@ OmniCorp Core</span>
+            </h3>
+            <p class="text-sm text-gray-400 mt-2 max-w-2xl">
+              Re-architected cross-functional layouts utilizing modern UI state
+              micro-managers to guarantee lightning-fast data pipeline
+              visualization rendering targets.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Interactive Contact Section -->
+      <section id="contact" class="pb-24">
+        <div
+          class="bg-brand-card rounded-2xl p-8 md:p-12 border border-gray-800 grid md:grid-cols-2 gap-12 items-center relative overflow-hidden"
+        >
+          <div class="space-y-4">
+            <h2 class="text-3xl font-heading font-bold text-white">
+              Let's prototype a vision.
+            </h2>
+            <p class="text-gray-400 text-sm max-w-sm leading-relaxed">
+              Have a design schema, system integration challenge, or enterprise
+              product layout requiring engineering expertise? Write in.
+            </p>
+            <div class="pt-4 space-y-2 font-mono text-xs">
+              <p class="text-gray-400">
+                <i class="fa-solid fa-envelope mr-2 text-brand-accent"></i>
+                contact@yourdomain.com
+              </p>
+              <p class="text-gray-400">
+                <i class="fa-solid fa-location-dot mr-2 text-brand-accent"></i>
+                San Francisco, California
+              </p>
+            </div>
+          </div>
+
+          <!-- Interactive form logic -->
+          <form
+            id="contact-form"
+            onsubmit="handleFormSubmit(event)"
+            class="space-y-4"
+          >
+            <div>
+              <input
+                type="text"
+                placeholder="Name"
+                required
+                class="w-full bg-brand-black text-gray-200 border border-gray-800 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-brand-accent transition-colors placeholder:text-gray-600"
+              />
+            </div>
+            <div>
+              <input
+                type="email"
+                placeholder="Email Address"
+                required
+                class="w-full bg-brand-black text-gray-200 border border-gray-800 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-brand-accent transition-colors placeholder:text-gray-600"
+              />
+            </div>
+            <div>
+              <textarea
+                rows="4"
+                placeholder="How can I assist you?"
+                required
+                class="w-full bg-brand-black text-gray-200 border border-gray-800 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-brand-accent transition-colors placeholder:text-gray-600 resize-none"
+              ></textarea>
+            </div>
+            <button
+              type="submit"
+              class="w-full bg-brand-black hover:bg-brand-accent hover:text-brand-black border border-brand-accent/40 text-brand-accent font-semibold py-3 rounded-lg transition-all text-sm"
+            >
+              Transmit Message
+            </button>
+            <div
+              id="form-success"
+              class="hidden text-xs text-brand-accent text-center font-mono mt-2 animate-fade-in"
+            >
+              <i class="fa-solid fa-circle-check mr-1"></i> Data packet received
+              cleanly. I'll reach out soon!
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer System -->
+    <footer class="border-t border-gray-900 bg-black/40 py-8">
+      <div
+        class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-600 gap-4"
+      >
+        <p>
+          &copy; 2026 Alex Carter. Built natively via Tailwind styling
+          protocols.
+        </p>
+        <div class="flex gap-4 text-base">
+          <a href="#" class="hover:text-brand-accent transition-colors"
+            ><i class="fa-brands fa-github"></i
+          ></a>
+          <a href="#" class="hover:text-brand-accent transition-colors"
+            ><i class="fa-brands fa-linkedin"></i
+          ></a>
+          <a href="#" class="hover:text-brand-accent transition-colors"
+            ><i class="fa-brands fa-x-twitter"></i
+          ></a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Interactive Script Layer -->
+    <script>
+      // 1. Terminal Interactive Simulation Logic
+      function runTerminalCmd(command) {
+        const output = document.getElementById("terminal-output");
+        output.classList.remove("hidden");
+
+        if (command === "skills") {
+          output.innerHTML = `→ Loaded core system processes:<br><span class="text-white">• Front: [React, Next.js, Redux, Tailwind]<br>• Back: [Node.js, Postgres, Redis, GraphQL]</span>`;
+        } else if (command === "coffee") {
+          output.innerHTML = `→ status: 418 I'm a teapot;<br><span class="text-amber-400">☕ Caffeine reserves replenished to 100%. Productivity metrics expanded.</span>`;
+        } else if (command === "clear") {
+          output.innerHTML = "";
+          output.classList.add("hidden");
+        }
+      }
+
+      // 2. Interactive Client Side Dynamic Project Filters
+      function filterProjects(category) {
+        const items = document.querySelectorAll(".project-item");
+        const buttons = document.querySelectorAll(".filter-btn");
+
+        // Reset dynamic tab active color styles
+        buttons.forEach((btn) => {
+          btn.classList.remove("bg-brand-accent", "text-brand-black");
+          btn.classList.add("text-gray-400", "hover:text-white");
+        });
+
+        // Highlight target tab element
+        const activeBtn = document.getElementById(`btn-${category}`);
+        activeBtn.classList.remove("text-gray-400", "hover:text-white");
+        activeBtn.classList.add("bg-brand-accent", "text-brand-black");
+
+        // Render matching target content modules
+        items.forEach((item) => {
+          if (
+            category === "all" ||
+            item.getAttribute("data-category") === category
+          ) {
+            item.style.display = "block";
+          } else {
+            item.style.display = "none";
+          }
+        });
+      }
+
+      // 3. Contact Form Submission Dynamic UI Feedback Loop
+      function handleFormSubmit(e) {
+        e.preventDefault();
+        const successEl = document.getElementById("form-success");
+        successEl.classList.remove("hidden");
+
+        // Clear standard raw field assets
+        e.target.reset();
+
+        // Auto hide notification layer after interval
+        setTimeout(() => {
+          successEl.classList.add("hidden");
+        }, 4000);
+      }
+    </script>
+  </body>
+</html>

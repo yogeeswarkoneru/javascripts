@@ -1,0 +1,308 @@
+.amazon-body {
+  height: 400px;
+  width: 1000px;
+  background-color: rgb(255, 255, 255);
+}
+.product-image-wrapper img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+.product-card {
+  background-color: white;
+  border: 1px solid #e0e0e0;
+  padding: 15px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+@media (min-width: 1100px) {
+  .product-card {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+@media (min-width: 300px) {
+  .product-card {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.amazon-body-container {
+  margin-top: 80px;
+  padding: 0px;
+  width: 100%;
+  box-sizing: border-box;
+}
+.product-info {
+  height: 50px;
+}
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 12px;
+}
+.amazon-body-container {
+  margin-top: 80px;
+  padding: 0px;
+  width: 100%;
+  box-sizing: border-box;
+}
+.product-info {
+  height: 50px;
+}
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 12px;
+}
+
+.product-grid {
+  display: inline-block;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  position: relative;
+  gap: 20px;
+}
+
+.product-info {
+  padding: 10px;
+  text-align: center;
+  font-size: 20px;
+  font-family: Arial, sans-serif;
+  justify-content: center;
+}
+.product-name {
+  margin-top: 0;
+  margin-bottom: 6px;
+  margin-left: -20px;
+
+  /* Forces text to align center inside its box */
+  text-align: center;
+
+  /* Strict 2-line clamping rules */
+  display: -webkit-box;
+
+  -webkit-line-clamp: 2; /* Change this to 1 or 3 if you ever want a different limit */
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  /* Ensures consistent line height across different text lengths */
+  line-height: 1.4em;
+  max-height: 2.8em; /* line-height multiplied by 2 lines */
+}
+
+.rating {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  margin: 0px 6px 0px 0px;
+  margin-bottom: px;
+  font-size: 26px;
+  color: #071aeb;
+  margin-top: 10px;
+  margin-left: 0px;
+}
+.price {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  font-family: Roboto, arial;
+  font-size: large;
+}
+.quantity-select {
+  margin-top: 20px;
+  height: 40px;
+  width: 60px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #dbdbdb;
+  background-color: #d2cfcf;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-left: 70px;
+}
+.quantity-select:hover {
+  background-color: #ffffff;
+  color: #000000;
+  border: 1px solid #000000;
+  cursor: pointer;
+}
+.add-to-cart-button {
+  margin-top: 50px;
+  font-size: 18px;
+  border: 1px solid #dbdbdb;
+  background-color: #ffa51e;
+  border-radius: 50px;
+  margin-left: -6px;
+  height: 50px;
+  width: 210px;
+  cursor: pointer;
+  justify-content: center;
+  font-size: 22px;
+}
+.add-to-cart-button:hover {
+  background-color: #ffdd02;
+  color: #000000;
+  border: 1px solid #000000;
+  cursor: pointer;
+}
+.product {
+  height: 180px;
+  align-items: center;
+  margin-left: 20px;
+}
+.product-card {
+  background: white;
+  border: 1px solid #e0e0e0;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ONE IMAGE WRAPPER FOR ALL PRODUCTS */
+.product-image-wrapper,
+.product-image-wrapper- {
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+/* ALL PRODUCT IMAGES */
+.product-image-wrapper img,
+.product-image-wrapper- img {
+  max-width: 100%;
+  max-height: 300px;
+  object-fit: contain;
+}
+.is-added {
+  background-color: #e6e6e6;
+  color: #000000;
+}
+.hidden {
+  display: none !important;
+}
+
+/* --- State B: Modern Quantity Controls Selector --- */
+.amazon-qty-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f0f2f2;
+  border: 1px solid #d5d9d9;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(213, 217, 217, 0.3);
+  overflow: hidden;
+  width: 100%;
+}
+
+.amazon-qty-btn {
+  background: transparent;
+  border: none;
+  color: #0f1111;
+  padding: 8px 16px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 35%;
+  transition: background 0.1s;
+}
+
+.amazon-qty-btn:hover {
+  background: #e3e6e6;
+}
+
+.amazon-qty-val {
+  font-size: 14px;
+  font-weight: 700;
+  color: #0f1111;
+  text-align: center;
+  width: 30%;
+}
+/* Quick inline styles to fix your layout layout */
+.amazon-body-container {
+  margin-top: 80px;
+  padding: 0px;
+  width: 100%; /* Changed from 220px to full width so items can fit side-by-side */
+  box-sizing: border-box;
+}
+.product-info {
+  height: 50px;
+}
+
+/* This container now holds ALL products and forces them into rows */
+/* Container holds ALL products and scales responsively */
+.product-grid {
+  display: grid;
+  margin-bottom: 90px;
+  /* Default for smaller/resized screens: fill rows based on available space */
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 12px; /* Slightly increased gap for better breathing room between cards */
+}
+
+/* Desktop override: Forces exactly 5 columns when the screen is wide enough */
+@media (min-width: 1100px) {
+  .product-grid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+/* Standardizing the product card look */
+.product-card {
+  background-color: white;
+  border: 1px solid #e0e0e0;
+  padding: 20px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.product-image-wrapper img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+.hidden {
+  display: none;
+}
+
+.quantity-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #000000;
+  border: 1px solid #d5d9d9;
+}
+
+.quantity-container button {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.quantity {
+  font-weight: bold;
+}
+.js-btn-one{
+  height: 40px;
+  width: 120px;
+  font-size: 16px;
+  border-radius: 20px 0 0 20px;
+  background-color: #ffdd02;
+  border : 1px solid rgb(51, 51, 51);
+  cursor: pointer;
+}
+.js-btn-two{
+  height: 40px;
+  width: 120px;
+  font-size: 16px;
+  border-radius: 0 20px 20px 0;
+  background-color: #ffdd02;
+  border : 1px solid rgb(51, 51, 51);
+  cursor: pointer;
+}

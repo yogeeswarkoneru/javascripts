@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Amazon Style Add To Cart</title>
+    <style>
+      body {
+        font-family: "Amazon Ember", Arial, sans-serif;
+        background-color: #eaeded;
+        padding: 50px;
+        display: flex;
+        gap: 20px;
+      }
+
+      /* Amazon Product Card Layout */
+      .amazon-card {
+        background: #ffffff;
+        padding: 20px;
+        width: 240px;
+        border-radius: 4px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .product-title {
+        font-size: 14px;
+        line-height: 20px;
+        color: #0f1111;
+        margin-bottom: 10px;
+        font-weight: 500;
+      }
+
+      /* Core Visibility Helper Class */
+      .hidden {
+        display: none !important;
+      }
+
+      /* --- State A: Amazon Yellow Button --- */
+      .amazon-add-btn {
+        background: #ffd814;
+        border: 1px solid #fcd200;
+        border-radius: 20px; /* Amazon style rounded button pill */
+        color: #0f1111;
+        padding: 8px 16px;
+        font-size: 13px;
+        text-align: center;
+        cursor: pointer;
+        width: 100%;
+        font-weight: 400;
+        box-shadow: 0 2px 5px rgba(213, 217, 217, 0.5);
+      }
+
+      .amazon-add-btn:hover {
+        background: #f7ca00;
+        border-color: #f2c200;
+      }
+
+      /* --- State B: Modern Quantity Controls Selector --- */
+      .amazon-qty-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: #f0f2f2;
+        border: 1px solid #d5d9d9;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(213, 217, 217, 0.3);
+        overflow: hidden;
+        width: 100%;
+      }
+
+      .amazon-qty-btn {
+        background: transparent;
+        border: none;
+        color: #0f1111;
+        padding: 8px 16px;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        width: 35%;
+        transition: background 0.1s;
+      }
+
+      .amazon-qty-btn:hover {
+        background: #e3e6e6;
+      }
+
+      .amazon-qty-val {
+        font-size: 14px;
+        font-weight: 700;
+        color: #0f1111;
+        text-align: center;
+        width: 30%;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Product 1 Card -->
+    <div class="amazon-card">
+      <div class="product-title">
+        Echo Dot (5th Gen) | Smart speaker with Alexa | Charcoal
+      </div>
+
+      <div class="amazon-controls" data-id="echo-dot-5">
+        <!-- Standard State -->
+        <button class="amazon-add-btn">Add to Cart</button>
+
+        <!-- Quantity Active State -->
+        <div class="amazon-qty-wrapper hidden">
+          <button class="amazon-qty-btn minus-btn">−</button>
+          <span class="amazon-qty-val">1</span>
+          <button class="amazon-qty-btn plus-btn">+</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product 2 Card -->
+    <div class="amazon-card">
+      <div class="product-title">
+        Kindle Paperwhite (16 GB) | 6.8" display and adjustable warm light
+      </div>
+
+      <div class="amazon-controls" data-id="kindle-pw-16">
+        <!-- Standard State -->
+        <button class="amazon-add-btn">Add to Cart</button>
+
+        <!-- Quantity Active State -->
+        <div class="amazon-qty-wrapper hidden">
+          <button class="amazon-qty-btn minus-btn">−</button>
+          <span class="amazon-qty-val">1</span>
+          <button class="amazon-qty-btn plus-btn">+</button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Global Cart Array to hold objects structured exactly as needed
+      let amazonCart = [];
+
+      function syncCartData(productId, type) {
+        const match = amazonCart.find((item) => item.id === productId);
+
+        if (type === "new") {
+          if (!match) amazonCart.push({ id: productId, quantity: 1 });
+        } else if (type === "up") {
+          if (match) match.quantity += 1;
+        } else if (type === "down") {
+          if (match) {
+            match.quantity -= 1;
+            // Clean slice the item out if it hits zero
+            if (match.quantity < 1) {
+              amazonCart = amazonCart.filter((item) => item.id !== productId);
+            }
+          }
+        }
+
+        // Check your Browser Console (F12) to watch it run live
+        console.log("Amazon Cart State Array:", JSON.stringify(amazonCart));
+      }
+
+      // Set up loops for each action panel block
+      document.querySelectorAll(".amazon-controls").forEach((panel) => {
+        const id = panel.getAttribute("data-id");
+        const addBtn = panel.querySelector(".amazon-add-btn");
+        const qtyWrapper = panel.querySelector(".amazon-qty-wrapper");
+        const minusBtn = panel.querySelector(".minus-btn");
+        const plusBtn = panel.querySelector(".plus-btn");
+        const currentNumDisplay = panel.querySelector(".amazon-qty-val");
+
+        let currentUnits = 1;
+
+        // 1. Interactive "Add To Cart" sequence
+        addBtn.addEventListener("click", () => {
+          // Change text instantly to simulate Amazon's processing pattern
+          addBtn.innerText = "✓ Added";
+          addBtn.style.background = "#EDF2F2";
+          addBtn.style.borderColor = "#D5D9D9";
+
+          // After a small delay (350ms), swap out to reveal the full quantitative controls
+          setTimeout(() => {
+            addBtn.classList.add("hidden");
+            qtyWrapper.classList.remove("hidden");
+
+            // Reset UI views
+            currentUnits = 1;
+            currentNumDisplay.textContent = currentUnits;
+
+            // Revert native button styling back in the background for clean re-renders later
+            addBtn.innerText = "Add to Cart";
+            addBtn.style.background = "";
+            addBtn.style.borderColor = "";
+
+            syncCartData(id, "new");
+          }, 350);
+        });
+
+        // 2. Addition Button
+        plusBtn.addEventListener("click", () => {
+          currentUnits++;
+          currentNumDisplay.textContent = currentUnits;
+          syncCartData(id, "up");
+        });
+
+        // 3. Subtraction Button
+        minusBtn.addEventListener("click", () => {
+          currentUnits--;
+
+          if (currentUnits < 1) {
+            // Switch back to normal view window
+            qtyWrapper.classList.add("hidden");
+            addBtn.classList.remove("hidden");
+          } else {
+            currentNumDisplay.textContent = currentUnits;
+          }
+
+          syncCartData(id, "down");
+        });
+      });
+    </script>
+  </body>
+</html>

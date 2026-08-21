@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <style>
+      .hidden-buttons {
+        display: none;
+        margin-top: 10px;
+      }
+
+      /* Style for feedback message */
+      #output {
+        margin-top: 15px;
+        font-weight: bold;
+        color: #0066cc;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Main trigger button -->
+    <button id="mainBtn">Click Me to Reveal Options</button>
+
+    <!-- Container for the two hidden buttons -->
+    <div id="buttonGroup" class="hidden-buttons">
+      <button id="btnOne">Button One</button>
+      <button id="btnTwo">Button Two</button>
+    </div>
+
+    <!-- Area to display interactive output -->
+    <div id="output"></div>
+
+    <script>
+      const mainBtn = document.getElementById("mainBtn");
+      const buttonGroup = document.getElementById("buttonGroup");
+
+      // Select the newly interactive buttons
+      const btnOne = document.getElementById("btnOne");
+      const btnTwo = document.getElementById("btnTwo");
+      const output = document.getElementById("output");
+
+      // Show the buttons on main click
+      mainBtn.addEventListener("click", () => {
+        buttonGroup.style.display = "flex";
+        buttonGroup.style.gap = "10px";
+      });
+
+      // Interaction 1: Update page content
+      btnOne.addEventListener("click", () => {
+        output.textContent = "You clicked Button One! Option A selected.";
+      });
+
+      // Interaction 2: Perform a different action (e.g., change style or perform a task)
+      btnTwo.addEventListener("click", () => {
+        output.textContent =
+          "You clicked Button Two! Changing background color...";
+        document.body.style.backgroundColor = "#f0f8ff"; // Light blue background
+      });
+    </script>
+  </body>
+</html>

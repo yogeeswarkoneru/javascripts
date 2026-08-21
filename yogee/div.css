@@ -1,0 +1,81 @@
+body {
+  background: linear-gradient(to left, rgb(166, 89, 89), rgb(193, 193, 82));
+}
+#box1 {
+  width: 250px;
+  height: 250px;
+
+  font-size: 225px;
+  text-align: center;
+  font-style: italic;
+  animation: mycolorchange, myslide, myrotate, myopacity, myscale;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
+
+@media (max-width: 600px) {
+}
+#box1 {
+  width: 250px;
+  height: 250px;
+
+  font-size: 225px;
+  text-align: center;
+  font-style: italic;
+}
+
+@keyframes myslide {
+  from {
+    margin-left: 100%;
+  }
+  to {
+    margin-left: 0%;
+  }
+}
+@keyframes mycolorchange {
+  10% {
+    background-color: skyblue;
+  }
+  20% {
+    background-color: orchid;
+  }
+  30% {
+    background-color: tomato;
+  }
+  40% {
+    background-color: rgb(115, 183, 13);
+  }
+  50% {
+    background-color: orange;
+  }
+  60% {
+    background-color: gold;
+  }
+  70% {
+    background-color: rgb(18, 171, 54);
+  }
+  80% {
+    background-color: rgb(177, 38, 126);
+  }
+  90% {
+    background-color: rgb(185, 47, 56);
+  }
+  100% {
+    background-color: purple;
+  }
+}
+@keyframes myrotate {
+  00% {
+    transform: rotatez(360deg);
+  }
+}
+@keyframes myopacity {
+  70000% {
+    opacity: 20%;
+  }
+}
+@keyframes myscale {
+  70% {
+    transform: scale(0.01, 0.8);
+  }
+}

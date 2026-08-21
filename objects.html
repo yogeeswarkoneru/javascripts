@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Objects</title>
+  </head>
+  <body>
+    <!-- Modified Contact Form Section -->
+    <form
+      action="https://api.web3forms.com/submit"
+      method="POST"
+      id="contact-form"
+      class="space-y-4"
+    >
+      <!-- 1. REQUIRED: Enter your real email access key here -->
+      <!-- Get a free key instantly at https://web3forms.com/ if you want your own -->
+      <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE" />
+
+      <div>
+        <!-- Adding name attributes so the backend knows what data it's reading -->
+        <input
+          type="text"
+          name="visitor_name"
+          placeholder="Name"
+          required
+          class="w-full bg-brand-black text-gray-200 border border-gray-800 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-brand-accent transition-colors placeholder:text-gray-600"
+        />
+      </div>
+      <div>
+        <input
+          type="email"
+          name="visitor_email"
+          placeholder="Email Address"
+          required
+          class="w-full bg-brand-black text-gray-200 border border-gray-800 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-brand-accent transition-colors placeholder:text-gray-600"
+        />
+      </div>
+      <div>
+        <textarea
+          rows="4"
+          name="visitor_message"
+          placeholder="How can I assist you?"
+          required
+          class="w-full bg-brand-black text-gray-200 border border-gray-800 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-brand-accent transition-colors placeholder:text-gray-600 resize-none"
+        ></textarea>
+      </div>
+
+      <button
+        type="submit"
+        class="w-full bg-brand-black hover:bg-brand-accent hover:text-brand-black border border-brand-accent/40 text-brand-accent font-semibold py-3 rounded-lg transition-all text-sm"
+      >
+        Transmit Message
+      </button>
+    </form>
+    <script>
+      // Replace your old handleFormSubmit function with this:
+      function handleFormSubmit(e) {
+        e.preventDefault();
+
+        const successEl = document.getElementById("form-success");
+
+        // Check if the browser supports system notifications
+        if (!("Notification" in window)) {
+          alert("This browser does not support desktop notifications");
+          showLocalSuccess(successEl, e);
+        }
+        // Check if permissions are already granted
+        else if (Notification.permission === "granted") {
+          sendDesktopNotification();
+          showLocalSuccess(successEl, e);
+        }
+        // Otherwise, ask the user for permission to send notifications
+        else if (Notification.permission !== "denied") {
+          Notification.requestPermission().then((permission) => {
+            if (permission === "granted") {
+              sendDesktopNotification();
+            }
+            showLocalSuccess(successEl, e);
+          });
+        }
+      }
+
+      // Helper to trigger the actual operating system notification banner
+      function sendDesktopNotification() {
+        new Notification("Portfolio Alert! 🚀", {
+          body: "A new user has submitted data into your contact form boxes.",
+          icon: "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/svgs/solid/circle-check.svg",
+        });
+      }
+
+      // Helper to reset form and show the UI message
+      function showLocalSuccess(element, event) {
+        element.classList.remove("hidden");
+        event.target.reset();
+        setTimeout(() => {
+          element.classList.add("hidden");
+        }, 4000);
+      }
+    </script>
+  </body>
+</html>

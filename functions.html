@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Functions</title>
+  </head>
+  <body>
+    <form action="https://www.amazon.com/gp/aws/cart/add.html" method="GET">
+      <!-- Replace B012NH05UW with your actual product ASIN -->
+      <input type="hidden" name="ASIN.1" value="YOUR_ASIN" />
+      <input type="hidden" name="Quantity.1" value="1" />
+
+      <!-- Your Affiliate Tracking Tag (Optional) -->
+      <input type="hidden" name="AssociateTag" value="YOUR_ASSOCIATE_TAG" />
+      <input type="hidden" name="tag" value="YOUR_ASSOCIATE_TAG" />
+
+      <!-- Submit Button -->
+      <input
+        type="submit"
+        name="submit.add-to-cart"
+        value="Add to Amazon Cart"
+      />
+    </form>
+    <script>
+      function computer() {
+        console.log("computer is thinking");
+      }
+      computer();
+    </script>
+  </body>
+</html>

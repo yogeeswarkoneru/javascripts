@@ -1,0 +1,37 @@
+a:link{
+    background-color: black;
+    border: 3px solid gold;
+    box-shadow: 5px 5px rgb(134, 6, 137);
+    font-size: 30px;
+
+}
+a:visited{
+   color:silver;
+}
+
+   
+
+a:active{
+    color:gray;
+}
+button{
+    margin-left:30px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: underline;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    box-shadow: 5px 5px  blue;
+    border:3px solid turquoise;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px; 
+    transition: background-color 5s;
+}
+button:hover{
+    background-color: aqua;
+    color:crimson
+}
+ul{
+    background:linear-gradient(to left ,rgb(235, 219, 219),rgb(70, 173, 213));
+    color: rgb(33, 63, 102);
+    
+}

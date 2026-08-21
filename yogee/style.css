@@ -1,0 +1,40 @@
+.body{
+    background-image: url("new\ york.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+.h1{
+    background:linear-gradient(to left ,skyblue,lightgreen);
+}
+.p1{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color:grey;
+   
+    font-weight: 400;
+    font-size: medium;
+    box-shadow:10px 10px lightblue ;
+    text-decoration: white dotted;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: gold;
+    background-color:greenyellow
+
+}
+.para{
+    padding-left: 50px;
+      border-top: dotted;
+    border-left: double;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+    border-left-width: 10px;
+    border-left-color: yellowgreen;
+    border-bottom: dotted;
+    border-right: double;
+    border-right-color: deeppink;
+    border-right-width: 10px;
+    border-top-right-radius: 20px;
+    color:red;
+    background-color: cyan;
+    box-shadow: 5px 5px  rgb(105, 142, 203);
+}

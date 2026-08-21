@@ -1,0 +1,1453 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Amazon</title>
+    <link rel="stylesheet" href="styles/amazon-header.css" />
+
+    <link rel="stylesheet" href="styles/amazon-product.css" />
+    <style>
+      /* Quick inline styles to fix your layout layout */
+      .amazon-body-container {
+        margin-top: 80px;
+        padding: 0px;
+        width: 100%; /* Changed from 220px to full width so items can fit side-by-side */
+        box-sizing: border-box;
+      }
+      .product-info {
+        height: 50px;
+      }
+
+      /* This container now holds ALL products and forces them into rows */
+      /* Container holds ALL products and scales responsively */
+      .product-grid {
+        display: grid;
+        /* Default for smaller/resized screens: fill rows based on available space */
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 12px; /* Slightly increased gap for better breathing room between cards */
+      }
+
+      /* Desktop override: Forces exactly 5 columns when the screen is wide enough */
+      @media (min-width: 1100px) {
+        .product-grid {
+          grid-template-columns: repeat(6, 1fr);
+        }
+      }
+
+      /* Standardizing the product card look */
+      .product-card {
+        background-color: white;
+        border: 1px solid #e0e0e0;
+        padding: 15px;
+        border-radius: 4px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .product-image-wrapper img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="amazon-body">
+      <div class="amazon-header">
+        <div class="left-section">
+          <a href=""></a>
+          <img
+            class="amazon-logo"
+            src="images/amazon-logo-white.png"
+            alt="Amazon Logo"
+          />
+        </div>
+        <div class="middle-section">
+          <input type="text" placeholder="Search" class="input" />
+          <img class="search-icon" src="images/search.svg" alt="Search Icon" />
+        </div>
+        <div class="right-section">
+          <div class="orders-section">
+            <span>Returns</span>
+            <span>& Orders</span>
+          </div>
+          <div class="cart-section">
+            <img class="cart-icon" src="images/cart-icon.png" alt="Cart Icon" />
+            <span class="cart-text">Cart</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="amazon-body-container">
+        <div class="product-grid">
+          <!--1st product -->
+          <div class="product-card">
+            <div class="product-image-wrapper">
+              <a href="">
+                <img
+                  src="images/athletic-cotton-socks-6-pairs.jpg"
+                  class="at"
+                  alt="Socks"
+                />
+              </a>
+            </div>
+            <div class="product-info">
+              <p class="product-name">
+                Black and Grey Athletic Cotton Socks 6 Pairs
+              </p>
+            </div>
+            <div class="rating">
+              <img
+                src="images/rating-45.png"
+                alt="Star Icon"
+                style="width: 100px; height: 24px"
+              />87
+            </div>
+            <div class="price">
+              <span>$15.99</span>
+            </div>
+            <div>
+              <select class="quantity-select">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            </div>
+            <div class="update-info"></div>
+            <div>
+              <button class="add-to-cart-button">Add to Cart</button>
+            </div>
+          </div>
+          <!--2nd product -->
+          <div class="product-card">
+            <div class="product-image-wrapper">
+              <a href="">
+                <img
+                  src="images/intermediate-composite-basketball.jpg"
+                  class="product-image"
+                  alt="Basketball"
+                />
+              </a>
+            </div>
+            <div class="product-info">
+              <p class="product-name basketball">
+                Intermediate Size Basketball
+              </p>
+            </div>
+            <div class="rating">
+              <img
+                src="images/rating-45.png"
+                alt="Star Icon"
+                style="width: 100px; height: 24px"
+              />50
+            </div>
+            <div class="price">
+              <span>$23.99</span>
+            </div>
+            <div>
+              <select class="quantity-select">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            </div>
+            <div class="update-info"></div>
+            <div>
+              <button class="add-to-cart-button">Add to Cart</button>
+            </div>
+          </div>
+          <!--3rd product -->
+          <div class="product-card">
+            <div class="product-image-wrapper">
+              <a href="">
+                <img
+                  src="images/adults-plain-cotton-tshirt-2-pack-teal.jpg"
+                  class="product-image"
+                  alt="T-Shirt"
+                />
+              </a>
+            </div>
+            <div class="product-info">
+              <p class="product-name">
+                Adults Plain Cotton T-Shirt 2-Pack Teal
+              </p>
+            </div>
+            <div class="rating">
+              <img
+                src="images/rating-45.png"
+                alt="Star Icon"
+                style="width: 100px; height: 24px"
+              />140
+            </div>
+            <div class="price">
+              <span>$10.99</span>
+            </div>
+            <div>
+              <select class="quantity-select">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            </div>
+            <div class="update-info"></div>
+            <div>
+              <button class="add-to-cart-button">Add to Cart</button>
+            </div>
+          </div>
+          <!--4th product -->
+          <div class="product-card">
+            <div class="product-image-wrapper">
+              <a href="">
+                <img
+                  src="images/6-piece-white-dinner-plate-set.jpg"
+                  class="product-image"
+                  alt="Dinner Plates"
+                />
+              </a>
+            </div>
+            <div class="product-info">
+              <p class="product-name">6-Piece White Dinner Plate Set</p>
+            </div>
+            <div class="rating">
+              <img
+                src="images/rating-45.png"
+                alt="Star Icon"
+                style="width: 100px; height: 24px"
+              />455
+            </div>
+            <div class="price">
+              <span>$24.99</span>
+            </div>
+            <div>
+              <select class="quantity-select">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            </div>
+            <div class="update-info"></div>
+            <div>
+              <button class="add-to-cart-button">Add to Cart</button>
+            </div>
+          </div>
+          <!--5th product -->
+          <div class="product-card">
+            <div class="product-image-wrapper-">
+              <a href="">
+                <img
+                  src="images/black-2-slot-toaster.jpg"
+                  class="product"
+                  alt="Dinner Plates"
+                />
+              </a>
+            </div>
+            <div class="product-info">
+              <p class="product-name">Black 2-Slot Toaster</p>
+            </div>
+            <div class="rating">
+              <img
+                src="images/rating-4.png"
+                alt="Star Icon"
+                style="width: 100px; height: 24px"
+              />299
+            </div>
+            <div class="price">
+              <span>$79.99</span>
+            </div>
+            <div>
+              <select class="quantity-select">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            </div>
+            <div class="update-info"></div>
+            <div>
+              <button class="add-to-cart-button">Add to Cart</button>
+            </div>
+          </div>
+          <!--6th product -->
+          <div class="product-card">
+            <div class="product-image-wrapper">
+              <a href="">
+                <img
+                  src="images/knit-athletic-sneakers-gray.jpg"
+                  class="product-image"
+                  alt="Dinner Plates"
+                />
+              </a>
+            </div>
+            <div class="product-info">
+              <p class="product-name knitted-athletic-sneakers">
+                Knit Athletic Sneakers - Gray
+              </p>
+            </div>
+            <div class="rating">
+              <img
+                src="images/rating-4.png"
+                alt="Star Icon"
+                style="width: 100px; height: 24px"
+              />2354
+            </div>
+            <div class="price">
+              <span>$49.99</span>
+            </div>
+            <div>
+              <select class="quantity-select">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            </div>
+            <div class="update-info"></div>
+            <div>
+              <button class="add-to-cart-button">Add to Cart</button>
+            </div>
+          </div>
+          <!--7th product -->
+          <div class="product-card">
+            <div class="product-image-wrapper">
+              <a href="">
+                <img
+                  src="images/luxury-tower-set-6-piece.jpg"
+                  class="product-image dinner-plates-image"
+                  alt="Dinner Plates"
+                />
+              </a>
+            </div>
+            <div class="product-info">
+              <p class="product-name black-toaster">Luxury Tower Set Combo</p>
+            </div>
+            <div class="rating">
+              <img
+                src="images/rating-45.png"
+                alt="Star Icon"
+                style="width: 100px; height: 24px"
+              />299
+            </div>
+            <div class="price">
+              <span>$99.99</span>
+            </div>
+            <div>
+              <select class="quantity-select">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            </div>
+            <div class="update-info"></div>
+            <div>
+              <button class="add-to-cart-button">Add to Cart</button>
+            </div>
+          </div>
+          <!--8th product -->
+          <div class="product-card">
+            <div class="product-image-wrapper-">
+              <a href="">
+                <img
+                  src="images/plain-hooded-fleece-sweatshirt-yellow.jpg"
+                  class="product"
+                  alt="Dinner Plates"
+                />
+              </a>
+            </div>
+            <div class="product-info">
+              <p class="product-name knitted-athletic-sneakers">
+                Plain Hooded Fleece Sweatshirt
+              </p>
+            </div>
+            <div class="rating">
+              <img
+                src="images/rating-45.png"
+                alt="Star Icon"
+                style="width: 100px; height: 24px"
+              />235
+            </div>
+            <div class="price">
+              <span>$39.99</span>
+            </div>
+            <div>
+              <select class="quantity-select">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            </div>
+            <div class="update-info"></div>
+            <div>
+              <button class="add-to-cart-button">Add to Cart</button>
+            </div>
+          </div>
+          <!--9th product  -->
+          <div class="product-card">
+            <div class="product-image-wrapper">
+              <a href="">
+                <img
+                  src="images/women-beach-sandals.jpg"
+                  class="product-image dinner-plates-image"
+                  alt="Dinner Plates"
+                />
+              </a>
+            </div>
+            <div class="product-info">
+              <p class="product-name knitted-athletic-sneakers">
+                Women's Two Strap Buckle Sandals - Tan
+              </p>
+            </div>
+            <div class="rating">
+              <img
+                src="images/rating-5 (1).png"
+                alt="Star Icon"
+                style="width: 100px; height: 24px"
+              />189
+            </div>
+            <div class="price">
+              <span>$65.99</span>
+            </div>
+            <div>
+              <select class="quantity-select">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            </div>
+            <div class="update-info"></div>
+            <div>
+              <button class="add-to-cart-button">Add to Cart</button>
+            </div>
+          </div>
+          <!--10th product -->
+          <div class="product-card">
+            <div class="product-image-wrapper">
+              <a href="">
+                <img
+                  src="images/6-piece-non-stick-baking-set.webp"
+                  class="product-image dinner-plates-image"
+                  alt="Dinner Plates"
+                />
+              </a>
+            </div>
+            <div class="product-info">
+              <p class="product-name">6-Piece Nonstick, Carbon Steel Oven</p>
+            </div>
+            <div class="rating">
+              <img
+                src="images/rating-5 (1).png"
+                alt="Star Icon"
+                style="width: 100px; height: 24px"
+              />235
+            </div>
+            <div class="price">
+              <span>$59.99</span>
+            </div>
+            <div>
+              <select class="quantity-select">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            </div>
+            <div class="update-info"></div>
+            <div>
+              <button class="add-to-cart-button">Add to Cart</button>
+            </div>
+          </div>
+          <!--11th product -->
+          <div class="product-card">
+            <div class="product-image-wrapper">
+              <a href="">
+                <img src="images/blackout-curtain-set-beige.webp" alt="" />
+              </a>
+            </div>
+            <div class="product-info">
+              <p class="product-name">Blackout Curtains Set 4-Pack - Beige</p>
+            </div>
+            <div class="rating">
+              <img
+                src="images/rating-4.png"
+                style="width: 100px; height: 24px"
+              />567
+            </div>
+            <div class="price">
+              <span>$100.0</span>
+            </div>
+            <div>
+              <select class="quantity-select">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            </div>
+            <div class="update-info"></div>
+            <div>
+              <button class="add-to-cart-button">Add to Cart</button>
+            </div>
+          </div>
+          <!-- 12th product-->
+          <div class="product-card">
+            <div class="product-image-wrapper-">
+              <a href="">
+                <img
+                  src="images/electric-glass-and-steel-hot-water-kettle.webp"
+                  class="product"
+                  alt=""
+                />
+              </a>
+            </div>
+            <div class="product-info">
+              <p class="product-name">
+                Electric Glass and Steel Hot Tea Water Bottle
+              </p>
+            </div>
+            <div class="rating">
+              <img
+                src="images/rating-45.png"
+                style="width: 100px; height: 24px"
+              />567
+            </div>
+            <div class="price">
+              <span>$95.0</span>
+            </div>
+            <div>
+              <select class="quantity-select">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            </div>
+            <div class="update-info"></div>
+            <div>
+              <button class="add-to-cart-button">Add to Cart</button>
+            </div>
+          </div>
+          <!-- 13th product-->
+          <div class="product-card">
+            <div class="product-image-wrapper">
+              <a href="">
+                <img src="images/facial-tissue-2-ply-18-boxes.jpg" alt="" />
+              </a>
+            </div>
+            <div class="product-info">
+              <p class="product-name">Ultra Soft Tissue 2-Ply - 18 Box</p>
+            </div>
+            <div class="rating">
+              <img
+                src="images/rating-5 (1).png"
+                style="width: 100px; height: 24px"
+              />867
+            </div>
+            <div class="price">
+              <span>$20.00</span>
+            </div>
+            <div>
+              <select class="quantity-select">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            </div>
+            <div class="update-info"></div>
+            <div>
+              <button class="add-to-cart-button">Add to Cart</button>
+            </div>
+          </div>
+          <!-- 14th product-->
+          <div class="product-card">
+            <div class="product-image-wrapper">
+              <a href="">
+                <img
+                  class="product"
+                  src="images/round-sunglasses-black.jpg"
+                  alt=""
+                />
+              </a>
+            </div>
+            <div class="product-info">
+              <p class="product-name">Round Sunglasses</p>
+            </div>
+            <div class="rating">
+              <img
+                src="images/rating-45.png"
+                style="width: 100px; height: 24px"
+              />86
+            </div>
+            <div class="price">
+              <span>$16.10</span>
+            </div>
+            <div>
+              <select class="quantity-select">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            </div>
+            <div class="update-info"></div>
+            <div>
+              <button class="add-to-cart-button">Add to Cart</button>
+            </div>
+          </div>
+          <!--15th product-->
+          <div class="product-card">
+            <div class="product-image-wrapper">
+              <a href="">
+                <img
+                  class="product"
+                  src="images/sky-flower-stud-earrings.webp"
+                  alt=""
+                />
+              </a>
+            </div>
+            <div class="product-info">
+              <p class="product-name">
+                Sterling Silver Sky Flower Stud Earrings
+              </p>
+            </div>
+            <div class="rating">
+              <img
+                src="images/rating-5 (1).png"
+                style="width: 100px; height: 24px"
+              />769
+            </div>
+            <div class="price">
+              <span>$59.99</span>
+            </div>
+            <div>
+              <select class="quantity-select">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            </div>
+            <div class="update-info"></div>
+            <div>
+              <button class="add-to-cart-button">Add to Cart</button>
+            </div>
+          </div>
+          <!-- 16th product-->
+          <div class="product-card">
+            <div class="product-image-wrapper">
+              <a href="">
+                <img class="product" src="images/straw-sunhat.webp" alt="" />
+              </a>
+            </div>
+            <div class="product-info">
+              <p class="product-name">Straw Lifeguard Sun Hat</p>
+            </div>
+            <div class="rating">
+              <img
+                src="images/rating-4.png"
+                style="width: 100px; height: 24px"
+              />865
+            </div>
+            <div class="price">
+              <span>$22.00</span>
+            </div>
+            <div>
+              <select class="quantity-select">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            </div>
+            <div class="update-info"></div>
+            <div>
+              <button class="add-to-cart-button">Add to Cart</button>
+            </div>
+          </div>
+          <!--17th product-->
+          <div class="product-card">
+            <div class="product-image-wrapper-">
+              <a href="">
+                <img
+                  class="product"
+                  src="images/women-chiffon-beachwear-coverup-black.jpg"
+                  alt=""
+                />
+              </a>
+            </div>
+            <div class="product-info">
+              <p class="product-name">
+                Women's Chiffon Beachwear Cover Up - Black
+              </p>
+            </div>
+            <div class="rating">
+              <img
+                src="images/rating-45.png"
+                style="width: 100px; height: 24px"
+              />453
+            </div>
+            <div class="price">
+              <span>$20.10</span>
+            </div>
+            <div>
+              <select class="quantity-select">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            </div>
+            <div class="update-info"></div>
+            <div>
+              <button class="add-to-cart-button">Add to Cart</button>
+            </div>
+          </div>
+          <!--18th product-->
+          <div class="product-card">
+            <div class="product-image-wrapper-">
+              <a href="">
+                <img
+                  class="product"
+                  src="images/women-stretch-popover-hoodie-black.jpg"
+                  alt=""
+                />
+              </a>
+            </div>
+            <div class="product-info">
+              <p class="product-name">Women's Stretch Popover Hoodie</p>
+            </div>
+            <div class="rating">
+              <img
+                src="images/rating-45.png"
+                style="width: 100px; height: 24px"
+              />96
+            </div>
+            <div class="price">
+              <span>$16.74</span>
+            </div>
+            <div>
+              <select class="quantity-select">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            </div>
+            <div class="update-info"></div>
+            <div>
+              <button class="add-to-cart-button">Add to Cart</button>
+            </div>
+          </div>
+          <!--19th product-->
+          <div class="product-card">
+            <div class="product-image-wrapper">
+              <a href="">
+                <img class="product" src="images/bathroom-rug.jpg" alt="" />
+              </a>
+            </div>
+            <div class="product-info">
+              <p class="product-name">Bathroom Bath Rug Mat 20 x 31 Inch</p>
+            </div>
+            <div class="rating">
+              <img
+                src="images/rating-4.png"
+                style="width: 100px; height: 24px"
+              />76
+            </div>
+            <div class="price">
+              <span>$14.50</span>
+            </div>
+            <div>
+              <select class="quantity-select">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            </div>
+            <div class="update-info"></div>
+            <div>
+              <button class="add-to-cart-button">Add to Cart</button>
+            </div>
+          </div>
+          <!--20th product-->
+          <div class="product-card">
+            <div class="product-image-wrapper">
+              <a href="">
+                <img
+                  class="product"
+                  src="images/duvet-cover-set-blue-twin.jpg"
+                  alt=""
+                />
+              </a>
+            </div>
+            <div class="product-info">
+              <p class="product-name">Duvet Cover Set with Zipper Closure</p>
+            </div>
+            <div class="rating">
+              <img
+                src="images/rating-45.png"
+                style="width: 100px; height: 24px"
+              />786
+            </div>
+            <div class="price">
+              <span>$18.20</span>
+            </div>
+            <div>
+              <select class="quantity-select">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            </div>
+            <div class="update-info"></div>
+            <div>
+              <button class="add-to-cart-button">Add to Cart</button>
+            </div>
+          </div>
+          <!--21th product-->
+          <div class="product-card">
+            <div class="product-image-wrapper">
+              <a href="">
+                <img
+                  class="product"
+                  src="images/men-golf-polo-t-shirt-blue.jpg"
+                  alt=""
+                />
+              </a>
+            </div>
+            <div class="product-info">
+              <p class="product-name">
+                Men's Regular-Fit Quick-Dry Golf Polo Shirt
+              </p>
+            </div>
+            <div class="rating">
+              <img
+                src="images/rating-45.png"
+                style="width: 100px; height: 24px"
+              />786
+            </div>
+            <div class="price">
+              <span>$12.09</span>
+            </div>
+            <div>
+              <select class="quantity-select">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            </div>
+            <div class="update-info"></div>
+            <div>
+              <button class="add-to-cart-button">Add to Cart</button>
+            </div>
+          </div>
+          <!--22th product-->
+          <div class="product-card">
+            <div class="product-image-wrapper-">
+              <a href="">
+                <img
+                  class="product"
+                  src="images/trash-can-with-foot-pedal-50-liter.jpg"
+                  alt=""
+                />
+              </a>
+            </div>
+            <div class="product-info">
+              <p class="product-name">
+                Trash Can with Foot Pedal - Brushed Stainless Steel
+              </p>
+            </div>
+            <div class="rating">
+              <img
+                src="images/rating-45.png"
+                style="width: 100px; height: 24px"
+              />168
+            </div>
+            <div class="price">
+              <span>$83.0</span>
+            </div>
+            <div>
+              <select class="quantity-select">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            </div>
+            <div class="update-info"></div>
+            <div>
+              <button class="add-to-cart-button">Add to Cart</button>
+            </div>
+          </div>
+          <!--23th product-->
+          <div class="product-card">
+            <div class="product-image-wrapper">
+              <a href="">
+                <img
+                  class="product"
+                  src="images/women-knit-ballet-flat-black.jpg"
+                  alt=""
+                />
+              </a>
+            </div>
+            <div class="product-info">
+              <p class="product-name">Women's Knit Ballet Flat</p>
+            </div>
+            <div class="rating">
+              <img
+                src="images/rating-4.png"
+                style="width: 100px; height: 24px"
+              />420
+            </div>
+            <div class="price">
+              <span>$26.40</span>
+            </div>
+            <div>
+              <select class="quantity-select">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            </div>
+            <div class="update-info"></div>
+            <div>
+              <button class="add-to-cart-button">Add to Cart</button>
+            </div>
+          </div>
+          <!--24th product-->
+          <div class="product-card">
+            <div class="product-image-wrapper-">
+              <a href="">
+                <img
+                  class="product"
+                  src="images/women-chunky-beanie-gray.webp"
+                  alt=""
+                />
+              </a>
+            </div>
+            <div class="product-info">
+              <p class="product-name">Women's Chunky Cable Beanie - Gray</p>
+            </div>
+            <div class="rating">
+              <img
+                src="images/rating-5 (1).png"
+                style="width: 100px; height: 24px"
+              />786
+            </div>
+            <div class="price">
+              <span>$14.50</span>
+            </div>
+            <div>
+              <select class="quantity-select">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            </div>
+            <div class="update-info"></div>
+            <div>
+              <button class="add-to-cart-button">Add to Cart</button>
+            </div>
+          </div>
+          <!--25th product-->
+          <div class="product-card">
+            <div class="product-image-wrapper-">
+              <a href="">
+                <img
+                  class="product"
+                  src="images/coffeemaker-with-glass-carafe-black.jpg"
+                  alt=""
+                />
+              </a>
+            </div>
+            <div class="product-info">
+              <p class="product-name">
+                Coffeemaker with Glass Carafe and Reusable Filter - 25 Oz, Black
+              </p>
+            </div>
+            <div class="rating">
+              <img
+                src="images/rating-45.png"
+                style="width: 100px; height: 24px"
+              />76
+            </div>
+            <div class="price">
+              <span>$22.90</span>
+            </div>
+            <div>
+              <select class="quantity-select">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            </div>
+            <div class="update-info"></div>
+            <div>
+              <button class="add-to-cart-button">Add to Cart</button>
+            </div>
+          </div>
+          <!--26th product-->
+          <div class="product-card">
+            <div class="product-image-wrapper-">
+              <a href="">
+                <img
+                  class="product"
+                  src="images/men-chino-pants-beige.jpg"
+                  alt=""
+                />
+              </a>
+            </div>
+            <div class="product-info">
+              <p class="product-name">Men's Classic-fit Pleated Chino Pants</p>
+            </div>
+            <div class="rating">
+              <img
+                src="images/rating-5 (1).png"
+                style="width: 100px; height: 24px"
+              />5017
+            </div>
+            <div class="price">
+              <span>$23.80</span>
+            </div>
+            <div>
+              <select class="quantity-select">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            </div>
+            <div class="update-info"></div>
+            <div>
+              <button class="add-to-cart-button">Add to Cart</button>
+            </div>
+          </div>
+          <!--27th product-->
+          <div class="product-card">
+            <div class="product-image-wrapper">
+              <a href="">
+                <img
+                  class="product"
+                  src="images/men-navigator-sunglasses-brown.jpg"
+                  alt=""
+                />
+              </a>
+            </div>
+            <div class="product-info">
+              <p class="product-name">Men's Navigator Sunglasses Pilot</p>
+            </div>
+            <div class="rating">
+              <img
+                src="images/rating-5 (1).png"
+                style="width: 100px; height: 24px"
+              />786
+            </div>
+            <div class="price">
+              <span>$16.90</span>
+            </div>
+            <div>
+              <select class="quantity-select">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            </div>
+            <div class="update-info"></div>
+            <div>
+              <button class="add-to-cart-button">Add to Cart</button>
+            </div>
+          </div>
+          <!--25th product-->
+          <div class="product-card">
+            <div class="product-image-wrapper-">
+              <a href="">
+                <img
+                  class="product"
+                  src="images/vanity-mirror-silver.jpg"
+                  alt=""
+                />
+              </a>
+            </div>
+            <div class="product-info">
+              <p class="product-name">Vanity Mirror with Heavy Base - Chrome</p>
+            </div>
+            <div class="rating">
+              <img
+                src="images/rating-4.png"
+                style="width: 100px; height: 24px"
+              />486
+            </div>
+            <div class="price">
+              <span>$16.49</span>
+            </div>
+            <div>
+              <select class="quantity-select">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            </div>
+            <div class="update-info"></div>
+            <div>
+              <button class="add-to-cart-button">Add to Cart</button>
+            </div>
+          </div>
+          <!--26th product-->
+          <div class="product-card">
+            <div class="product-image-wrapper-">
+              <a href="">
+                <img
+                  class="product"
+                  src="images/women-french-terry-fleece-jogger-camo.jpg"
+                  alt=""
+                />
+              </a>
+            </div>
+            <div class="product-info">
+              <p class="product-name">Women's Fleece Jogger Sweatpant</p>
+            </div>
+            <div class="rating">
+              <img
+                src="images/rating-5 (1).png"
+                style="width: 100px; height: 24px"
+              />1046
+            </div>
+            <div class="price">
+              <span>$19.0</span>
+            </div>
+            <div>
+              <select class="quantity-select">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            </div>
+            <div class="update-info"></div>
+            <div>
+              <button class="add-to-cart-button">Add to Cart</button>
+            </div>
+          </div>
+          <!--28th product-->
+          <div class="product-card">
+            <div class="product-image-wrapper-">
+              <a href="">
+                <img
+                  class="product"
+                  src="images/double-elongated-twist-french-wire-earrings.webp"
+                  alt=""
+                />
+              </a>
+            </div>
+            <div class="product-info">
+              <p class="product-name">
+                Double Oval Twist French Wire Earrings - Gold
+              </p>
+            </div>
+            <div class="rating">
+              <img
+                src="images/rating-45.png"
+                style="width: 100px; height: 24px"
+              />786
+            </div>
+            <div class="price">
+              <span>$20.34</span>
+            </div>
+            <div>
+              <select class="quantity-select">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            </div>
+            <div class="update-info"></div>
+            <div>
+              <button class="add-to-cart-button">Add to Cart</button>
+            </div>
+          </div>
+          <!--29th product-->
+          <div class="product-card">
+            <div class="product-image-wrapper">
+              <a href="">
+                <img
+                  class="product"
+                  src="images/cotton-bath-towels-teal.webp"
+                  alt=""
+                />
+              </a>
+            </div>
+            <div class="product-info">
+              <p class="product-name">
+                100% Cotton Bath Towels - 2 Pack, Light Teal
+              </p>
+            </div>
+            <div class="rating">
+              <img
+                src="images/rating-45.png"
+                style="width: 100px; height: 24px"
+              />786
+            </div>
+            <div class="price">
+              <span>$21.0</span>
+            </div>
+            <div>
+              <select class="quantity-select">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            </div>
+            <div class="update-info"></div>
+            <div>
+              <button class="add-to-cart-button">Add to Cart</button>
+            </div>
+          </div>
+          <!--32th product-->
+          <div class="product-card">
+            <div class="product-image-wrapper">
+              <a href="">
+                <img
+                  class="product"
+                  src="images/countertop-blender-64-oz.jpg"
+                  alt=""
+                />
+              </a>
+            </div>
+            <div class="product-info">
+              <p class="product-name">Countertop Blender - 64oz, 1400 Watts</p>
+            </div>
+            <div class="rating">
+              <img
+                src="images/rating-45.png"
+                style="width: 100px; height: 24px"
+              />56
+            </div>
+            <div class="price">
+              <span>$110.0</span>
+            </div>
+            <div>
+              <select class="quantity-select">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            </div>
+            <div class="update-info"></div>
+            <div>
+              <button class="add-to-cart-button">Add to Cart</button>
+            </div>
+          </div>
+          <!--33th product-->
+          <div class="product-card">
+            <div class="product-image-wrapper">
+              <a href="">
+                <img
+                  class="product"
+                  src="images/floral-mixing-bowl-set.jpg"
+                  alt=""
+                />
+              </a>
+            </div>
+            <div class="product-info">
+              <p class="product-name">
+                10-Piece Mixing Bowl Set with Lids - Floral
+              </p>
+            </div>
+            <div class="rating">
+              <img
+                src="images/rating-5 (1).png"
+                style="width: 100px; height: 24px"
+              />500
+            </div>
+            <div class="price">
+              <span>$38.99</span>
+            </div>
+            <div>
+              <select class="quantity-select">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            </div>
+            <div class="update-info"></div>
+            <div>
+              <button class="add-to-cart-button">Add to Cart</button>
+            </div>
+          </div>
+          <!--34th product-->
+          <div class="product-card">
+            <div class="product-image-wrapper">
+              <a href="">
+                <img
+                  class="product"
+                  src="images/kitchen-paper-towels-30-pack.jpg"
+                  alt=""
+                />
+              </a>
+            </div>
+            <div class="product-info">
+              <p class="product-name">2-Ply Kitchen Paper Towels - 30 Pack</p>
+            </div>
+            <div class="rating">
+              <img
+                src="images/rating-45.png"
+                style="width: 100px; height: 24px"
+              />1045
+            </div>
+            <div class="price">
+              <span>$49.90</span>
+            </div>
+            <div>
+              <select class="quantity-select">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            </div>
+            <div class="update-info"></div>
+            <div>
+              <button class="add-to-cart-button">Add to Cart</button>
+            </div>
+          </div>
+          <!--35th product-->
+          <div class="product-card">
+            <div class="product-image-wrapper">
+              <a href="">
+                <img
+                  class="product"
+                  src="images/knit-athletic-sneakers-pink.webp"
+                  alt=""
+                />
+              </a>
+            </div>
+            <div class="product-info">
+              <p class="product-name">
+                Waterproof Knit Athletic Sneakers - Pink
+              </p>
+            </div>
+            <div class="rating">
+              <img
+                src="images/rating-45.png"
+                style="width: 100px; height: 24px"
+              />99
+            </div>
+            <div class="price">
+              <span>$38.99</span>
+            </div>
+            <div>
+              <select class="quantity-select">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            </div>
+            <div class="update-info"></div>
+            <div>
+              <button class="add-to-cart-button">Add to Cart</button>
+            </div>
+          </div>
+          <!--36th product-->
+          <div class="product-card">
+            <div class="product-image-wrapper">
+              <a href="">
+                <img
+                  class="product"
+                  src="images/men-athletic-shoes-green.jpg"
+                  alt=""
+                />
+              </a>
+            </div>
+            <div class="product-info">
+              <p class="product-name">Men's Athletic Sneaker</p>
+            </div>
+            <div class="rating">
+              <img
+                src="images/rating-45.png"
+                style="width: 100px; height: 24px"
+              />78
+            </div>
+            <div class="price">
+              <span>$45.09</span>
+            </div>
+            <div>
+              <select class="quantity-select">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            </div>
+            <div class="update-info"></div>
+            <div>
+              <button class="add-to-cart-button">Add to Cart</button>
+            </div>
+          </div>
+          <!-- this is closing tag -->
+        </div>
+      </div>
+    </main>
+    <script src="">
+      let console = print ;
+
+              print.log(2+5+65+346);
+              console.log('hello')
+    </script>
+  </body>
+</html>

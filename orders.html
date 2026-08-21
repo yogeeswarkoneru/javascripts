@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Orders & Returns</title>
+    <link rel="stylesheet" href="styles/amazon-header.css" />
+  </head>
+  <body>
+    <h2>Review Your Orders</h2>
+    <div class="amazon-header">
+      <div class="amazon-headder-left-section">
+        <a href="Amazon.html" class="header-link">
+        <img
+          class="amazon-logo"
+          src="images/amazon-logo-white.png"
+          alt="Amazon Logo"
+        />
+      </div>
+      </a>
+      <div class="amazon-header-middle-section">
+        <input type="text" placeholder="Search" class="search-bar" />
+        <button class="search-button">
+          <img class="search-icon" src="images/search.svg" alt="Search Icon" />
+        </button>
+      </div>
+      <div class="amazon-header-right-section">
+        <a class="orders-link header-link" href="orders.html">
+          <span class="returns-text">Returns</span>
+          <span class="orders-text">& Orders</span>
+        </a>
+        <a class="cart-link header-link" href="checkout.html"
+          ><img class="cart-icon" src="images/cart-icon.png" alt="Cart Icon" />
+          <div class="cart-quantity js-cart-quantity">0</div>
+          <div class="cart-text">cart</div>
+        </a>
+      </div>
+    </div>
+    <script type="module" src="scripts/orders.js"></script>
+  </body>
+</html>

@@ -1,0 +1,75 @@
+.sidebar{
+    bottom: 50;
+    left: 0;
+    top: 10;
+    position: fixed;
+    width: 75px;
+    align-items: center;
+    font-family: "roboto",arial;
+    
+}
+.sidebar-link:hover{
+    cursor: pointer;
+    background-color: rgb(200, 199, 199);
+}
+.sidebar-link{
+    height: 100px;
+    margin-top: 1px;
+}
+.home{
+    width: 50px;
+    height: 50px;
+    padding-left: 9px;
+    padding-top: 19px;
+
+}
+.explore{
+      width: 50px;
+    height: 50px;
+    padding-left: 9px;
+    padding-top: 19px;
+
+} 
+.subscriptions{
+    width: 50px;
+    height: 50px;
+    padding-left: 9px;
+    padding-top: 19px;
+}
+.originals{
+     width: 50px;
+    height: 50px;
+    padding-left: 9px;
+    padding-top: 19px;
+}
+.music{
+     width: 50px;
+    height: 50px;
+    padding-left: 9px;
+    padding-top: 19px;
+}
+.library{
+     width: 50px;
+    height: 50px;
+    padding-left: 9px;
+    padding-top: 19px;
+}
+.home-txt{
+    padding-left: 6px;
+}
+.explore-txt{
+    padding-left: 5px; 
+}
+.sub-txt{
+    font-size: 12px;
+}
+.org-txt{
+    padding-left: 5px;
+    font-size: 15px;
+}
+.yt-txt{
+    padding-left: 6px;
+}
+.lib-txt{
+    padding-left: 5px;
+}

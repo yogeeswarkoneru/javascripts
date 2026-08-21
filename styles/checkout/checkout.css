@@ -1,0 +1,238 @@
+.main {
+  max-width: 1100px;
+  padding-left: 30px;
+  padding-right: 30px;
+
+  margin-top: 140px;
+  margin-bottom: 100px;
+
+  /* margin-left: auto;
+     margin-right auto;
+     Is a trick for centering an element horizontally
+     without needing a container. */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.page-title {
+  font-weight: 700;
+  font-size: 22px;
+  margin-bottom: 18px;
+}
+
+.checkout-grid {
+  display: grid;
+  /* Here, 1fr means the first column will take
+     up the remaining space in the grid. */
+  grid-template-columns: 1fr 350px;
+  column-gap: 12px;
+
+  /* Use align-items: start; to prevent the elements
+     in the grid from stretching vertically. */
+  align-items: start;
+}
+
+@media (max-width: 1000px) {
+  .main {
+    max-width: 500px;
+  }
+
+  .checkout-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.cart-item-container,
+.payment-summary {
+  border: 1px solid rgb(222, 222, 222);
+  border-radius: 4px;
+  padding: 18px;
+}
+
+.cart-item-container {
+  margin-bottom: 12px;
+}
+
+.payment-summary {
+  padding-bottom: 5px;
+}
+@media (min-width: 1001px) {
+  .payment-summary {
+    grid-column: 2 / 3; /* Places it in the second column (adjust as needed for your grid) */
+    grid-row: 1; /* Keeps it in the first row */
+    margin-top: 0; /* Reset margin if desired */
+  }
+}
+
+@media (max-width: 1000px) {
+  .payment-summary {
+    grid-column: 1 / -1; /* Forces it to span the entire width on smaller screens */
+    margin-top: 12px;
+  }
+}
+
+.delivery-date {
+  color: rgb(61, 255, 12);
+  font-weight: 700;
+  font-size: 19px;
+  margin-top: 5px;
+  margin-bottom: 22px;
+}
+
+.cart-item-details-grid {
+  display: grid;
+  /* 100px 1fr 1fr; means the 2nd and 3rd column will
+     take up half the remaining space in the grid
+     (they will divide up the remaining space evenly). */
+  grid-template-columns: 100px 1fr 1fr;
+  column-gap: 25px;
+}
+
+@media (max-width: 1000px) {
+  .cart-item-details-grid {
+    grid-template-columns: 100px 1fr;
+    row-gap: 30px;
+  }
+}
+
+.product-image {
+  max-width: 100%;
+  max-height: 150px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.product-name {
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.product-price {
+  color: rgb(177, 39, 4);
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.product-quantity .link-primary {
+  margin-left: 15px;
+  cursor: pointer;
+}
+
+@media (max-width: 1000px) {
+  .delivery-options {
+    /* grid-column: 1 means this element will be placed
+       in column 1 in the grid. (Normally, the column that
+       an element is placed in is determined by the order
+       of the elements in the HTML. grid-column overrides
+       this default ordering).
+       
+       / span 2 means this element will take up 2 columns
+       in the grid (Normally, each element takes up 1
+       column in the grid). */
+    grid-column: 1 / span 2;
+  }
+}
+
+.delivery-options-title {
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.delivery-option {
+  display: grid;
+  grid-template-columns: 24px 1fr;
+  margin-bottom: 12px;
+  cursor: pointer;
+}
+
+.delivery-option-input {
+  margin-left: 0px;
+  cursor: pointer;
+}
+
+.delivery-option-date {
+  color: rgb(2, 220, 2);
+  font-weight: bold;
+  margin-bottom: 3px;
+  font-size: 16px;
+  font-family: roboto;
+}
+
+.delivery-option-price {
+  color: rgb(120, 120, 120);
+  font-size: 15px;
+}
+
+.payment-summary-title {
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+.payment-summary-row {
+  display: grid;
+
+  grid-template-columns: 1fr auto;
+  font-size: 15px;
+  margin-bottom: 9px;
+}
+
+.payment-summary-money {
+  text-align: right;
+}
+
+.subtotal-row .payment-summary-money {
+  border-top: 1px solid rgb(222, 222, 222);
+}
+
+.subtotal-row div {
+  padding-top: 9px;
+}
+
+.total-row {
+  color: rgb(177, 39, 4);
+  font-weight: 700;
+  font-size: 18px;
+
+  border-top: 1px solid rgb(222, 222, 222);
+  padding-top: 18px;
+}
+
+.place-order-button {
+  width: 100%;
+  padding-top: 12px;
+  font-size: 20px;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 28px;
+  font-weight: bold;
+  padding-bottom: 12px;
+  border-radius: 80px;
+  margin-top: 11px;
+  border: none;
+  margin-bottom: 15px;
+  cursor: pointer;
+  background-color: rgb(35, 97, 255);
+  color: wheat;
+}
+.delete-quantity-link {
+  color: rgb(255, 0, 0);
+  font-size: 16px;
+}
+
+/* Removed the space here */
+.delete-quantity-link:active {
+  color: fuchsia;
+  cursor: pointer;
+}
+.update-quantity-link {
+  color: blue;
+  font-size: 16px;
+}
+.update-quantity-link:active {
+  cursor: pointer;
+  color: fuchsia;
+}
+.pay- {
+  font-size: x-large;
+  margin-top: 0px;
+}

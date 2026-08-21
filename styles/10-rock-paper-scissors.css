@@ -1,0 +1,80 @@
+body {
+  background-color: rgb(25, 25, 25);
+  color: white;
+}
+.play {
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  font-family: "arial";
+}
+.rock-image {
+  height: 70px;
+  padding-left: 0px;
+}
+.paper-image {
+  height: 70px;
+  border-radius: 30px;
+}
+.scissors-image {
+  height: 70px;
+  border-radius: 30px;
+  margin-right: 0px;
+}
+.image {
+  cursor: pointer;
+  background-color: Transparent;
+  height: 120px;
+  width: 120px;
+  margin-right: 10px;
+  border-radius: 60px;
+  border: 8px solid rgb(23, 195, 75);
+}
+.js-result {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 40px;
+  font-family: "arial";
+}
+.score {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 40px;
+  font-family: "arial";
+}
+.reset-button {
+  margin-top: 40px;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: "arial";
+  background-color: blue;
+  color: rgb(236, 160, 7);
+  border: 4px solid rgb(161, 45, 203);
+  border-radius: 30px;
+  padding: 10px 20px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(249, 248, 248, 0.3);
+}
+.image-paper {
+  cursor: pointer;
+  background-color: Transparent;
+  height: 120px;
+  width: 120px;
+  margin-right: 10px;
+  border-radius: 60px;
+  border: 8px solid rgb(241, 8, 225);
+}
+.image-scissors {
+  cursor: pointer;
+  background-color: Transparent;
+  height: 120px;
+  width: 120px;
+  border-radius: 60px;
+  border: 8px solid rgb(181, 22, 27);
+}
+.js-moves {
+  font-size: 20px;
+
+  margin-top: 40px;
+  font-family: "arial";
+}

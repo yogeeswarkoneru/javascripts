@@ -1,0 +1,130 @@
+body {
+  background-color: rgb(25, 25, 25);
+  color: white;
+
+  /* This links the animation to the body */
+  animation: mycolorchange 25s infinite alternate;
+}
+
+/* Move the @keyframes OUTSIDE of the body selector */
+/*@keyframes mycolorchange { 
+  10%  { background-color: skyblue; } 
+  20%  { background-color: orchid; } 
+  30%  { background-color: tomato; } 
+  40%  { background-color: rgb(115, 183, 13); } 
+  50%  { background-color: orange; } 
+  60%  { background-color: gold; } 
+  70%  { background-color: rgb(18, 171, 54); } 
+  80%  { background-color: rgb(177, 38, 126); } 
+  90%  { background-color: rgb(18, 47, 56); } 
+  100% { background-color: purple; } 
+} */
+
+.play {
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  font-family: "arial";
+  font-size: 40px;
+  font-weight: bold;
+  background: linear-gradient(to left, rgb(1, 162, 255), rgb(255, 79, 173));
+  -webkit-background-clip: text; /* Clips background to text shape */
+  background-clip: text;
+  -webkit-text-fill-color: transparent; /* Makes original text invisible */
+}
+
+.rock-image {
+  height: 70px;
+  padding-left: 0px;
+}
+
+.paper-image {
+  height: 70px;
+  border-radius: 30px;
+}
+.scissors-image {
+  height: 70px;
+  border-radius: 30px;
+  margin-right: 0px;
+}
+.image {
+  cursor: pointer;
+  background-color: Transparent;
+  height: 120px;
+  width: 120px;
+  margin-right: 10px;
+  border-radius: 60px;
+  border: 4px solid rgb(23, 195, 75);
+  background: linear-gradient(
+    to left,
+    rgba(0, 149, 255, 0.633),
+    rgb(255, 0, 21)
+  );
+}
+.js-result {
+  font-size: 24px;
+  font-weight: bolder;
+  margin-top: 40px;
+  font-family: "Times New Roman", Times, serif;
+  background: linear-gradient(rgb(255, 22, 154), rgb(255, 0, 0));
+  -webkit-background-clip: text; /* Clips background to text shape */
+  background-clip: text;
+  -webkit-text-fill-color: transparent; /* Makes original text invisible */
+}
+.score {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 40px;
+  font-family: "arial";
+}
+.reset-button,
+.auto-play-button {
+  margin-top: 40px;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: "arial";
+  background-color: blue;
+  color: rgb(236, 160, 7);
+  border: 4px solid rgb(161, 45, 203);
+  border-radius: 30px;
+  padding: 10px 20px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(249, 248, 248, 0.3);
+}
+.image-paper {
+  cursor: pointer;
+  background-position: center;
+  background-repeat: no-repeat;
+  background: linear-gradient(to left, rgb(5, 82, 126), rgb(196, 114, 158));
+  height: 120px;
+  width: 120px;
+  margin-right: 10px;
+  border-radius: 60px;
+  border: 4px solid rgb(241, 8, 225);
+}
+.image-scissors {
+  cursor: pointer;
+  background-color: Transparent;
+  background: linear-gradient(
+    to left,
+    rgb(0, 255, 115),
+    rgba(255, 136, 0, 0.895)
+  );
+  height: 120px;
+  width: 120px;
+  border-radius: 60px;
+  border: 4px solid rgb(181, 22, 27);
+}
+.js-moves {
+  font-size: 20px;
+
+  margin-top: 40px;
+  font-family: "arial";
+}
+.marquee {
+  margin-top: 40px;
+  font-size: medium;
+  font-family:
+    "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}

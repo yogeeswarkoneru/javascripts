@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <title>say</title>
+    <body>
+        <h1>welcome to web </h1>
+        <h2>what you need</h2>
+        <p>hello world</p>
+        <style>
+            .gradient{
+                font-size: 50px;
+                font-weight: bold;
+                background:lineae-gradient(to right,red,yellow,blue);
+                -webkit-background-clip:text;
+                color:transparent;
+            }
+        </style>
+        <p class="gradient"> good morning</p>
+    </body>
+</html>
