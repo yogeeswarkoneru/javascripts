@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cat API</title>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100vh;
+        margin: 10px;
+      }
+      .cat-image {
+        max-width: 1000px;
+        max-height: 1000px;
+      }
+      .cat-container {
+        height: 400px;
+        width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .cat-container img {
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+      }
+      .new-cat-button {
+        display: block;
+        margin: 20px auto;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        background: linear-gradient(rgb(27, 27, 27), white, rgb(27, 27, 27));
+        color: blue;
+        border: 2px solid #ccc;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+      }
+    </style>
+  </head>
+  <body>
+    <button class="new-cat-button" title="press enter to get a new cat">
+      Get New Cat
+    </button>
+    <div class="cat-container">
+      <img src="" class="cat-image" />
+    </div>
+
+    <script>
+      const catImage = document.querySelector(".cat-image");
+      function loadnewcat() {
+        const savedImage = localStorage.getItem("catImage-src");
+
+        if (savedImage) {
+          catImage.src = savedImage;
+        } else {
+          getNewCat();
+        }
+      }
+
+      function getNewCat() {
+        fetch("https://api.thecatapi.com/v1/images/search")
+          .then((response) => response.json())
+          .then((data) => {
+            const catImageUrl = data[0].url;
+            catImage.src = catImageUrl;
+            localStorage.setItem("catImage-src", catImageUrl);
+          })
+          .catch((error) => console.error("Error fetching cat image:", error));
+      }
+
+      document
+        .querySelector(".new-cat-button")
+        .addEventListener("click", () => {
+          getNewCat();
+        });
+
+      loadnewcat();
+    </script>
+  </body>
+</html>

@@ -2,60 +2,62 @@
 <html>
   <head>
     <title>Rock Paper Scissors</title>
-    <link rel="stylesheet" href="styles/12-rock-paper-scissors.css" />
+    <link rel="stylesheet" href="12-rock-paper-scissors.css" />
     <style></style>
   </head>
   <body>
     <p class="play">Rock Paper Scissors</p>
-    <button onclick="playGame('rock')" class="image" title="rock">
-      <img class="rock-image" src="images/rock-emoji.png" />
-    </button>
-    <button
-      onclick="playGame('paper')"
-      class="image-paper"
-      title="paper"
-      onkeydown="
-        if (event.key === 'p') {
-          playGame('paper');
-        }
-      "
-    >
-      <img class="paper-image box" src="images/paper-emoji.png" />
-    </button>
-    <button
-      onclick="playGame('scissors')"
-      class="image-scissors"
-      title="scissors"
-    >
-      <img class="scissors-image" src="images/scissors-emoji.png" />
-    </button>
-    <p class="js-result"></p>
-    <p class="js-moves"></p>
-    <p class="js-score score"></p>
-    <button
-      onclick="
-        score.wins = 0;
-        score.lose = 0;
-        score.tie = 0;
-        localStorage.removeItem('score'); // Clear from localStorage on reset
+    <div class="game-container">
+      <button onclick="playGame('rock')" class="image" title="rock">
+        <img class="rock-image" src="images/rock-emoji.png" />
+      </button>
+      <button
+        onclick="playGame('paper')"
+        class="image-paper"
+        title="paper"
+        onkeydown="
+          if (event.key === 'p') {
+            playGame('paper');
+          }
+        "
+      >
+        <img class="paper-image box" src="images/paper-emoji.png" />
+      </button>
+      <button
+        onclick="playGame('scissors')"
+        class="image-scissors"
+        title="scissors"
+      >
+        <img class="scissors-image" src="images/scissors-emoji.png" />
+      </button>
+      <p class="js-result"></p>
+      <p class="js-moves"></p>
+      <p class="js-score score"></p>
+      <button
+        onclick="
+          score.wins = 0;
+          score.lose = 0;
+          score.tie = 0;
+          localStorage.removeItem('score'); // Clear from localStorage on reset
 
-        alert(`Score reset! \n wins : 0, lose : 0, tie : 0.`);
-        UpdateScore();
-      "
-      class="reset-button"
-      title="Click to reset your score"
-    >
-      Reset score
-    </button>
-    <button
-      class="auto-play-button"
-      title="Click to start auto play"
-      onclick="autoPlay()"
-    >
-      Auto Play
-    </button>
+          alert(`Score reset! \n wins : 0, lose : 0, tie : 0.`);
+          UpdateScore();
+        "
+        class="reset-button"
+        title="Click to reset your score"
+      >
+        Reset score
+      </button>
+      <button
+        class="auto-play-button"
+        title="Click to start auto play"
+        onclick="autoPlay()"
+      >
+        Auto Play
+      </button>
+    </div>
 
-    <marquee class="marquee">Have Fun Enjoy The Game...</marquee>
+    <marquee class="marquee">Have Fun Enjoy The Game😃😃</marquee>
     <script>
       // 1. Load the score from localStorage, or use default values if it doesn't exist yet
       const score = JSON.parse(localStorage.getItem("score")) || {

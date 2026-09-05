@@ -3,22 +3,41 @@ body {
   color: white;
 
   /* This links the animation to the body */
-  animation: mycolorchange 25s infinite alternate;
+  animation: mycolorchange 150s infinite alternate;
 }
 
-/* Move the @keyframes OUTSIDE of the body selector */
-/*@keyframes mycolorchange { 
-  10%  { background-color: skyblue; } 
-  20%  { background-color: orchid; } 
-  30%  { background-color: tomato; } 
-  40%  { background-color: rgb(115, 183, 13); } 
-  50%  { background-color: orange; } 
-  60%  { background-color: gold; } 
-  70%  { background-color: rgb(18, 171, 54); } 
-  80%  { background-color: rgb(177, 38, 126); } 
-  90%  { background-color: rgb(18, 47, 56); } 
-  100% { background-color: purple; } 
-} */
+@keyframes mycolorchange {
+  10% {
+    background-color: skyblue;
+  }
+  20% {
+    background-color: orchid;
+  }
+  30% {
+    background-color: tomato;
+  }
+  40% {
+    background-color: rgb(115, 183, 13);
+  }
+  50% {
+    background-color: orange;
+  }
+  60% {
+    background-color: gold;
+  }
+  70% {
+    background-color: rgb(18, 171, 54);
+  }
+  80% {
+    background-color: rgb(177, 38, 126);
+  }
+  90% {
+    background-color: rgb(18, 47, 56);
+  }
+  100% {
+    background-color: purple;
+  }
+}
 
 .play {
   font-size: 26px;
@@ -95,7 +114,13 @@ body {
   cursor: pointer;
   background-position: center;
   background-repeat: no-repeat;
-  background: linear-gradient(to left, rgb(5, 82, 126), rgb(196, 114, 158));
+  background: linear-gradient(
+    to left,
+    rgb(98, 98, 98),
+    rgb(5, 82, 126),
+    rgb(196, 114, 158),
+    yellow
+  );
   height: 120px;
   width: 120px;
   margin-right: 10px;
@@ -127,4 +152,8 @@ body {
   font-family:
     "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.game-container {
+  justify-content: center;
+  align-items: center;
 }
